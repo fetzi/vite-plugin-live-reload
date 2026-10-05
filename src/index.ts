@@ -1,5 +1,5 @@
 import { Plugin, ViteDevServer } from 'vite'
-import chokidar, { WatchOptions } from 'chokidar'
+import chokidar, { ChokidarOptions } from 'chokidar'
 import colors from 'picocolors'
 import path from 'path'
 
@@ -9,7 +9,7 @@ function getShortName(file: string, root: string) {
 }
 
 /** Plugin configuration */
-export interface Config extends WatchOptions {
+export interface Config extends ChokidarOptions {
   /**
    * Whether the page should be reloaded regardless of which file is modified.
    * @default false
